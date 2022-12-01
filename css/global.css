@@ -1,0 +1,236 @@
+/* Masonry hover */
+.portfolio_group.masonry-hover .portfolio-item {
+  width: 31.2%;
+  margin: 0 1% 20px;
+}
+.portfolio_group.masonry-hover .portfolio-item .masonry-hover-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  padding: 10% 10% 50px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  h3:after {
+  content: "";
+  display: block;
+  margin: 15px 0;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  h3
+  a {
+  color: #fff;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .desc-inner {
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper {
+  bottom: 18px;
+  box-sizing: border-box;
+  left: 0;
+  padding: 0 7% 0 8%;
+  position: absolute;
+  width: 100%;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.zoom,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.link,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.external {
+  font-size: 25px;
+  color: #fff;
+  position: relative;
+  top: 0;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.zoom {
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.link {
+  float: right;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.external {
+}
+.portfolio_group.masonry-hover .portfolio-item .image-wrapper {
+  line-height: 0;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc.bg-light
+  h3
+  a,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc.bg-light
+  .desc-inner,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc.bg-light
+  .links-wrappper
+  a {
+  color: #444;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc.bg-light
+  h3:after {
+  background: #444;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper:hover
+  .hover-desc {
+  opacity: 1;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a:hover.zoom,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a:hover.link,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a:hover.external {
+  top: -3px;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item.no-thumbnail
+  .masonry-hover-wrapper
+  .hover-desc {
+  padding: 10%;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item.no-thumbnail
+  .masonry-hover-wrapper {
+  overflow: visible;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item.no-thumbnail
+  .masonry-hover-wrapper
+  .hover-desc {
+  position: static;
+  opacity: 1;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item.no-thumbnail
+  .masonry-hover-wrapper
+  .hover-desc
+  .desc-inner {
+  margin-bottom: 15px;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item.no-thumbnail
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper {
+  position: static;
+  padding: 0;
+  margin-top: 30px;
+}
+.portfolio_group.masonry-hover
+  .portfolio-item.no-thumbnail
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.zoom {
+  display: none;
+}
+/* Animation */
+
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.zoom,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.link,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc
+  .links-wrappper
+  a.external,
+.portfolio_group.masonry-hover
+  .portfolio-item
+  .masonry-hover-wrapper
+  .hover-desc {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
