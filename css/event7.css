@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap"); */
+
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/Oswald-Medium.woff") format("woff2"),
@@ -16,6 +18,112 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("../fonts/TrebuchetMS.ttf");
+}
+
+@font-face {
+  font-family: "Bree Serif";
+  src: url("../fonts/BreeSerif-Regular.ttf");
+}
+
+/* Mukta */
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-ExtraLight.ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../fonts/Mukta/Mukta-SemiBold.ttf");
+  font-weight: 600;
+}
+
+/* Bree Serif */
+@font-face {
+  font-family: "Bree Serif";
+  src: url("../fonts/BreeSerif-Regular.ttf");
+  font-weight: normal;
+}
+
+/* Exo */
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-Thin.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo/Exo-Black.ttf");
+  font-weight: 900;
+}
+
 #Footer {
   background-image: url(../images/event7-footer-bg.png);
   background-repeat: no-repeat;
@@ -23,7 +131,7 @@
 }
 .products,
 .about-us {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 @media only screen and (max-width: 1240px) {
   body:not(.template-slider):not(.header-simple) #Header {
@@ -31,7 +139,7 @@
   }
   .products,
   .about-us {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 }
 ul {
@@ -266,8 +374,12 @@ input[type="submit"] {
   text-align: right;
 }
 .mfn_heading .title {
-  display: inline-block;
+  display: block;
   position: relative;
+  font-family: "Bree Serif";
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .mfn_heading.heading_lines {
   overflow: hidden;
@@ -275,7 +387,7 @@ input[type="submit"] {
 .mfn_heading.heading_lines .title .line {
   position: absolute;
   width: 3000px;
-  height: 1px;
+  height: 0px;
   top: 50%;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -374,13 +486,20 @@ input[type="submit"] {
 .image_frame .image_wrapper {
   position: relative;
   overflow: hidden;
+  margin-block: auto;
 }
 .image_frame .image_wrapper {
   display: block;
   width: 100%;
   height: 100%;
-  max-height: 400px;
 }
+
+@media (min-width: 768px) {
+  .image_frame .image_wrapper {
+    max-height: 400px;
+  }
+}
+
 .image_frame .image_wrapper .mask {
   position: absolute;
   left: 0;
@@ -1430,7 +1549,17 @@ h6 {
     line-height: 20px;
   }
 }
+.product-modal img {
+  max-width: 160px !important;
+}
+
+.product-modal .image_frame {
+  margin-inline: auto;
+}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .product-modal .image-wrapper {
+    max-height: 400px;
+  }
   body {
     font-size: 13px;
     line-height: 19px;
@@ -1807,14 +1936,15 @@ h6 {
 .button-custom .woocommerce a.button,
 .button-custom .woocommerce button.button,
 .button-custom .woocommerce input.button {
-  font-family: Poppins;
-  font-size: 14px;
-  line-height: 14px;
+  font-family: Exo;
+  font-size: 17px;
+  line-height: 17px;
   font-weight: 600;
   letter-spacing: 0px;
   padding: 13px 30px 13px 30px;
   border-width: 0px;
   border-radius: 0px;
+  color: #fff;
 }
 .button-custom .button {
   color: #fff;
@@ -1859,7 +1989,7 @@ h6 {
 }
 .button-custom .action_button:hover {
   color: #fff;
-  background-color: #fe9466;
+  background-color: #5a8269;
   border-color: transparent;
 }
 .button-custom .single_add_to_cart_button,
@@ -1881,7 +2011,7 @@ h6 {
 .header-plain #Top_bar #logo,
 .header-transparent #Top_bar #logo {
   height: 150px;
-  line-height: 150px;
+  line-height: 135px;
   padding: 50px 0;
 }
 .logo-overflow #Top_bar:not(.is-sticky) .logo {
@@ -1889,6 +2019,12 @@ h6 {
 }
 #Top_bar .menu > li > a {
   padding: 95px 0;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: Exo;
+}
+#Top_bar .menu > li:hover > a {
+  color: #7dba00;
 }
 .menu-highlight:not(.header-creative) #Top_bar .menu > li > a {
   margin: 100px 0;
@@ -2438,7 +2574,7 @@ h6 {
   #Header_creative #Top_bar .menu > li > a span {
     border-right: 0;
     border-bottom-width: 1px;
-    line-height: 38px;
+    line-height: 33px;
   }
   #Header_creative #Top_bar .menu li ul {
     left: 100%;
@@ -2472,11 +2608,10 @@ h6 {
     max-height: max-content;
     width: 100% !important;
     float: none;
-    margin-top: auto;
     margin-bottom: 35px;
     text-align: center;
     padding: 0 20px;
-    top: 0;
+    top: 40px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -2774,6 +2909,14 @@ h6 {
   }
 }
 @media only screen and (min-width: 768px) {
+  .product-modal img {
+    max-width: none !important;
+  }
+  .product-modal .image_wrapper {
+    max-height: none;
+
+    height: 100%;
+  }
   #Top_bar.is-sticky {
     position: fixed !important;
     width: 100%;
@@ -3757,12 +3900,15 @@ hr.hr_color,
 #Footer,
 #Footer .widget_recent_entries ul li a {
   color: #fff;
+  font-family: Exo;
+  font-size: 17px;
+  letter-spacing: 0px;
 }
 #Footer a {
-  color: #ff793e;
+  color: #fff;
 }
 #Footer a:hover {
-  color: #fe9466;
+  color: #7dba00;
 }
 #Footer h1,
 #Footer h1 a,
@@ -4223,7 +4369,7 @@ textarea:focus {
 }
 @media only screen and (max-width: 767px) {
   #Top_bar {
-    background-color: #121519 !important;
+    background-color: #144d29 !important;
   }
   #Action_bar {
     background-color: #ffffff !important;
@@ -4395,6 +4541,7 @@ body.mobile-side-slide {
   right: -250px;
   width: 250px;
   height: 100%;
+  max-height: 350px;
   overflow: auto;
   border-bottom-width: 60px;
   border-bottom-style: solid;
@@ -4480,10 +4627,10 @@ body.mobile-side-slide {
 #Side_slide #menu ul li {
   width: 100%;
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-top: 1px solid #5a8269;
 }
 #Side_slide #menu > ul:last-child > li:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid #5a8269;
 }
 #Side_slide #menu ul li a {
   display: block;
@@ -4491,7 +4638,10 @@ body.mobile-side-slide {
   margin-right: 50px;
   text-decoration: none;
   line-height: 19px;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: Exo;
+  color: #fff;
 }
 #Side_slide #menu ul li a .menu-arrow {
   display: none;
@@ -4599,8 +4749,8 @@ body.mobile-side-slide {
 /* Side Slide | Color */
 
 #Side_slide {
-  background-color: #191919;
-  border-color: #191919;
+  background-color: #144d29;
+  border-color: #144d29;
 }
 /* border-bottom:60px - mobile fallback */
 
@@ -4846,6 +4996,7 @@ body:not(.woocommerce-page) table tr:hover td a {
 .masonry-hover-wrapper {
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 .masonry-hover-wrapper .hover-desc {
   opacity: 0;
@@ -4855,16 +5006,16 @@ body:not(.woocommerce-page) table tr:hover td a {
   background-color: rgba(0, 0, 0, 0.3);
   height: 100%;
   width: 100%;
-  padding: 10% 10% 50px;
+  padding: 8% 5% 50px 5%;
   box-sizing: border-box;
   z-index: 2;
 }
 .masonry-hover-wrapper .hover-desc h3:after {
   content: "";
   display: block;
-  margin: 15px 0;
-  width: 20px;
-  height: 3px;
+  margin: 10px 0;
+  width: 60px;
+  height: 1px;
   background: #fff;
 }
 .masonry-hover-wrapper .hover-desc h3 a {
@@ -4875,11 +5026,19 @@ body:not(.woocommerce-page) table tr:hover td a {
   overflow: hidden;
   color: #fff;
 }
+.masonry-hover-wrapper .hover-desc .desc-inner .desc-wrappper {
+  font-family: "Trebuchet MS";
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+  color: #fff;
+  letter-spacing: 0px;
+}
 .masonry-hover-wrapper .hover-desc .links-wrappper {
   bottom: 18px;
   box-sizing: border-box;
   left: 0;
-  padding: 0 7% 0 8%;
+  padding: 0 5% 0 5%;
   position: absolute;
   width: 100%;
 }
@@ -4929,7 +5088,7 @@ body:not(.woocommerce-page) table tr:hover td a {
 }
 
 .entry-title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 29px;
   font-weight: 400;
   letter-spacing: 0px;
@@ -6241,19 +6400,14 @@ body:not(.woocommerce-page) table tr:hover td a {
 
 /* Color chart */
 .hex {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(2, 1fr); */
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
+  row-gap: 28px;
 }
-
-@media (min-width: 560px) {
-  .hex {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .hex {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -6262,25 +6416,47 @@ body:not(.woocommerce-page) table tr:hover td a {
   .hex {
     grid-template-columns: repeat(4, 1fr);
   }
-}
+} */
 
 .hex .card {
+  width: 100%;
+  max-width: 8.5rem;
   border: none;
   text-align: center;
-  margin-inline: auto;
 }
 
 .hex .card img {
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   margin-inline: auto;
 }
 
-.hex .card-text {
-  font-size: 20px;
-  font-weight: bold;
+@media (min-width: 568px) {
+  .hex {
+    gap: 20px;
+  }
+  .hex .card {
+    max-width: 14rem;
+  }
+  .hex .card img {
+    width: 180px;
+    height: 180px;
+    margin-inline: auto;
+  }
 }
 
+.hex .card-text {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: exo;
+  color: #000;
+}
+
+.hex .card-body {
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-inline: 0;
+}
 /* 
 .hex{
 	display: flex;
@@ -6351,3 +6527,96 @@ body:not(.woocommerce-page) table tr:hover td a {
 .hex .card {
     left: 15%;
 } */
+
+.modal .desc-wrappper {
+  font-family: "Trebuchet MS";
+  font-size: 16px;
+  line-height: 21px;
+  text-align: justify;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.about-us-content {
+  font-family: "Mukta", sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  color: #000;
+  line-height: 21px;
+  text-align: justify;
+  letter-spacing: 0;
+}
+
+.modal .column_attr {
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper {
+  max-width: max-content;
+  margin-inline: auto;
+  padding-inline: 10px;
+}
+
+.products {
+  padding-bottom: 50px;
+  background-color: #f0ece8;
+  background-image: url(images/event7-section-bg7.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.portfolio-item .masonry-hover-wrapper {
+  height: 100%;
+  background-color: #fff;
+}
+.row-gap-40 {
+  row-gap: 40px;
+}
+.product1-bg,
+.row .portfolio-item:first-child .masonry-hover-wrapper .hover-desc {
+  background-color: rgba(87, 37, 36, 0.9);
+}
+.product2-bg,
+.row .portfolio-item:nth-child(2) .masonry-hover-wrapper .hover-desc {
+  background-color: rgba(90, 80, 9, 0.9);
+}
+.product3-bg,
+.row .portfolio-item:nth-child(3) .masonry-hover-wrapper .hover-desc {
+  background-color: rgba(19, 37, 109, 0.9);
+}
+.product4-bg,
+.row .portfolio-item:nth-child(4) .masonry-hover-wrapper .hover-desc {
+  background-color: rgba(133, 63, 12, 0.9);
+}
+.product5-bg,
+.row .portfolio-item:nth-child(5) .masonry-hover-wrapper .hover-desc {
+  background-color: rgba(152, 55, 63, 0.9);
+}
+.product6-bg,
+.row .portfolio-item:last-child .masonry-hover-wrapper .hover-desc {
+  background-color: rgba(125, 186, 0, 0.9);
+}
+.p-12 {
+  padding: 12px;
+}
+.text-lg {
+  font-size: 25px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.product-modal .modal-dialog {
+  height: 100vh;
+  max-width: min(700px, 75%);
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
