@@ -260,12 +260,14 @@ table.simple tr:last-child td {
 .style-simple table td {
   border-width: 0 1px 1px 0;
 }
+
 .style-simple table:not(.recaptchatable) tr td:last-child,
 .style-simple table tr th:last-child {
   border-right: 0;
 }
+.style-simple table tr:last-child th,
 .style-simple table:not(.recaptchatable) tr:last-child td {
-  border-bottom: 0;
+  border-bottom: 0 !important;
 }
 .style-simple table:not(.recaptchatable) tr:nth-child(2n) td {
   background: none;
@@ -379,7 +381,6 @@ input[type="submit"] {
   font-family: "Bree Serif";
   font-size: 32px;
   font-weight: 700;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .mfn_heading.heading_lines {
   overflow: hidden;
@@ -387,8 +388,8 @@ input[type="submit"] {
 .mfn_heading.heading_lines .title .line {
   position: absolute;
   width: 3000px;
-  height: 0px;
-  top: 50%;
+  height: 1px;
+  top: 68%;
   background: rgba(0, 0, 0, 0.3);
 }
 .mfn_heading.heading_lines .title .line_l {
@@ -396,7 +397,6 @@ input[type="submit"] {
   margin-right: 20px;
 }
 .mfn_heading.heading_lines .title .line_r {
-  left: 100%;
   margin-left: 20px;
 }
 .dark .mfn_heading.heading_lines .title .line {
@@ -6405,7 +6405,7 @@ body:not(.woocommerce-page) table tr:hover td a {
   /* grid-template-columns: repeat(2, 1fr); */
   justify-content: center;
   gap: 30px;
-  row-gap: 28px;
+  row-gap: 40px;
 }
 /* @media (min-width: 768px) {
   .hex {
@@ -6434,6 +6434,7 @@ body:not(.woocommerce-page) table tr:hover td a {
 @media (min-width: 568px) {
   .hex {
     gap: 20px;
+    row-gap: 40px;
   }
   .hex .card {
     max-width: 14rem;
@@ -6555,7 +6556,8 @@ body:not(.woocommerce-page) table tr:hover td a {
   letter-spacing: 0;
 }
 
-.modal .column_attr {
+.modal .column_attr,
+.masonry-hover-wrapper .column_attr {
   display: flex;
   align-items: center;
 }
@@ -6582,15 +6584,15 @@ body:not(.woocommerce-page) table tr:hover td a {
 }
 .product1-bg,
 .row .portfolio-item:first-child .masonry-hover-wrapper .hover-desc {
-  background-color: rgba(87, 37, 36, 0.9);
+  background-color: rgba(19, 37, 109, 0.9);
 }
 .product2-bg,
 .row .portfolio-item:nth-child(2) .masonry-hover-wrapper .hover-desc {
-  background-color: rgba(90, 80, 9, 0.9);
+  background-color: rgba(87, 37, 36, 0.9);
 }
 .product3-bg,
 .row .portfolio-item:nth-child(3) .masonry-hover-wrapper .hover-desc {
-  background-color: rgba(19, 37, 109, 0.9);
+  background-color: rgba(90, 80, 9, 0.9);
 }
 .product4-bg,
 .row .portfolio-item:nth-child(4) .masonry-hover-wrapper .hover-desc {
@@ -6602,7 +6604,7 @@ body:not(.woocommerce-page) table tr:hover td a {
 }
 .product6-bg,
 .row .portfolio-item:last-child .masonry-hover-wrapper .hover-desc {
-  background-color: rgba(125, 186, 0, 0.9);
+  background-color: rgba(20, 77, 41, 0.9);
 }
 .p-12 {
   padding: 12px;
@@ -6619,4 +6621,110 @@ body:not(.woocommerce-page) table tr:hover td a {
 }
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+/* Contact us */
+.contact-us {
+  width: 100%;
+  height: auto;
+  padding-bottom: 45px;
+}
+.contact-us input {
+  width: 100%;
+}
+.contact-us .form-control {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07);
+}
+
+.contact-us .form-group input {
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  font-family: "Trebuchet MS";
+}
+.contact-us .form-group textarea {
+  font-family: "Trebuchet MS";
+}
+
+.contact-us .form-group textarea {
+  border-radius: 0;
+}
+.contact-us button {
+  background: #144d29;
+  border-color: #144d29;
+  color: white;
+  border-radius: 0;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-family: "Trebuchet MS";
+  float: left;
+}
+.contact-us button:hover {
+  background: #84c225;
+  border-color: #84c225;
+  color: white;
+}
+
+.map-box {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+}
+.address-info h6 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: "Trebuchet MS";
+  letter-spacing: 0;
+}
+.address-info p {
+  font-family: "Trebuchet MS";
+  font-size: 16px;
+  color: black;
+  letter-spacing: 0;
+}
+.address-info a {
+  color: #000;
+}
+@media only screen and (max-width: 990px) {
+  .contact-us {
+    padding: 40px 0;
+  }
+  .contact-us .form-group input {
+    height: 40px;
+  }
+  .contact-us button {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+.dealers .title {
+  margin-top: 45px;
+  font-family: Exo;
+  font-size: 22px;
+  font-weight: 700;
+}
+.dealers p {
+  line-height: 20px;
+}
+.dealers-list {
+  columns: 1;
+  column-gap: 100px;
+}
+@media (min-width: 568px) {
+  .dealers-list {
+    columns: 2;
+  }
+}
+
+.dealers-list > div {
+  break-inside: avoid-column;
+}
+.dealers-list > div > h5 {
+  font-family: Oswald;
+  font-weight: 500;
+  border-bottom: 1px solid #144d29;
+  color: #144d29;
 }
